@@ -1,0 +1,44 @@
+{
+  "name": "guru-sockets",
+  "version": "1.0.0",
+  "description": "sockets server for guru",
+  "main": "build/app.js",
+  "scripts": {
+    "start": "npm run build && node -r dotenv/config build/app.js",
+    "watch": "babel -w src/ -d build/",
+    "build": "babel src/ -d build/",
+    "serve": "babel -w src/ -d build/ | nodemon --watch build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinop/guru-sockets.git"
+  },
+  "author": "Martin Ocando",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinop/guru-sockets/issues"
+  },
+  "homepage": "https://github.com/martinop/guru-sockets#README",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-validation": "^1.0.2",
+    "formidable": "^1.2.1",
+    "http": "0.0.0",
+    "http-status": "^1.0.1",
+    "joi": "^13.1.2",
+    "morgan": "^1.9.0",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "nodemon": "^1.11.0"
+  }
+}
