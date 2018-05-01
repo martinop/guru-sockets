@@ -1,5 +1,5 @@
 export default (io) => {
-    io.on('connection', function(socket) {
+    io.on('connection', (socket) => {
         socket.on('join', (data) => {
             console.log(data)
         })
